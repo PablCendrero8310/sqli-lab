@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        form {
+            display: flex;
+            flex-direction: column;
+            justify-items: center;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="{{url_for('login')}}" method="post">
+        <label for="username">Nombre de usuario: <input type="text" id="username" name="username"
+                placeholder="Nombre de usuario" required> </label>
+        <br>
+        <label for="password">Contraseña: <input type="text" id="password" name="password" placeholder="Contraseña"
+                required>
+        </label>
+        <br>
+        <input type="submit" value="Log in">
+    </form>
+
+    <p style="text-align: center;">{{error}}</p>
+
+</body>
+
+
+</html>
